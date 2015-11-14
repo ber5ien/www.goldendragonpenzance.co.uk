@@ -1,0 +1,87 @@
+		   	</td>
+  			</tr>
+ 		</table>
+	</td>
+		
+			
+<!-- koniec srodka -->
+
+<!-- right menu -->
+	<td width=200 valign=top>	
+				<div class="contentright"><center><h2>DELIVERY CHARGES</h2></center></div>
+					
+				<div class="subboxright">
+					<ul>
+						<li><center><a href="staustell.php">St Austell &raquo;</a></center></li>
+						<li><center><a href="roche.php">Roche &raquo;</a></center></li>	
+						<li><center><a href="truro.php">Truro &raquo;</a></center></li>
+					</ul>	
+				</div>
+							
+						<?
+							//echo $_SESSION['userlogin'];
+							if ( isset($_SESSION['userlogin']) && $_SESSION['userlogin']==1 )
+							{
+							echo "	<div class='contentright'><center><h2>LOGIN</h2></center></div>
+										<div class='subboxright'>	";
+								echo "You are log in as <b> ".$_SESSION['user']."</b>";
+								echo "
+									<form action='logout.php' method=post>
+									<center><input class='button' type='submit' value='Logout'></center>
+									</form>
+								";
+								echo "</div>";
+							}else{
+							?>
+					
+						
+				<div class="contentright"><center><h2>LOGIN</h2></center></div>
+					<div class="subboxright">
+					
+						<form action='login.php' method=post>
+						<label for='email'>Email:</label>								
+							<input id=label size=20 type ='text' name='userid'>
+						<label for='password'>Password:</label>
+							<input id=password size=20 type ='password' name='password'></font>		
+							<input class='button' type='submit' value='Submit  '></font>
+						</form>
+						<form action='register.php' method='post'>
+						<input class='button' type='submit' value='Register'>
+						</form>
+					</div>
+<?
+}
+?>
+				<div class="contentright"><center><h2>SET MENUS</h2></center></div>
+					<div class="subboxright"><ul><?menu_list();?></ul></div>
+			
+				<div class="contentright"><center><h2>SPECIAL DISHES</h2></center></div>
+					<div class="subboxright"><ul><? special_list(); ?></ul></div>
+			
+				<div class="contentright"><center><h2>DRINKS</h2></center></div>
+					<div class="subboxright"><ul><? drinks_list(); ?></ul></div>
+			
+		  </td>
+		 </tr>
+		</table>
+			<!-- end of right columnt -->
+ 	 </td>
+	</tr>
+  </table>
+ 			<!-- end of center without sides -->
+  </td>
+ </tr>
+</table>
+			<!-- end of table with both sides -->
+
+<table style="width: 1000px; background-image:url(graphics/bottom.png); height: 46px" cellpadding="0" cellspacing="0" align=center>
+<tr><td></td></tr>	
+</table>
+
+<table style="background-color:white" width=100% border=0 align=center cellpadding="0" cellspacing="0">
+		<tr><td align=center><a href=admin.php>W</a>ebsite design by <a href="mailto:rafal.zdziech@gmail.com">aMiGa</a></td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# robots.txt file created at http://www.searchenginepromotionhelp.com/
+# Wed, 28 Jul 2010 08:42:42 +0000
+
+# Exclude Files From All Robots:
+
+User-agent: *
+Disallow: /phpMyAdmin
+Disallow: /config.php
+
+# End robots.txt file
+

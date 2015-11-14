@@ -1,0 +1,88 @@
+<?
+session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>GOLDEN DRANGO ADMIN PANEL</title>
+</head>
+<body>
+<table border=1 width=100%>
+<tr>
+  <td width=100% bgcolor=#19A349><center><h1>JADE PALACE ADMIN PANEL</h1></center></td>
+  </tr>
+<tr><td>
+  <hr/>
+
+<?
+
+include('config.php');
+include('class.emailer.php');
+include('admin_functions.php');
+
+if ( $_GET['logout'] == 1 ) {
+unset($_SESSION['user']);
+
+}
+
+if (isset($_SESSION['user']))
+{
+ if ($_SESSION['user'] == $admin)
+ {
+ 	admin_menu("home");
+ }
+}
+
+if($_POST["userid"]== $admin && $_POST["password"] == $password && $_GET["login"]== 1)
+{
+$_SESSION['user'] = $_POST["userid"];
+admin_menu("home");
+
+
+?>
+<?
+
+}
+
+if ( isset($_SESSION['user']) && $_SESSION['user'] == $admin )
+{
+
+}else{
+ 
+?>
+        		
+<form action='admin.php?login=1' method=post>
+
+<table border='0' cellspacing='0' cellpadding='0' align=center>
+		<tr> 
+			<td bgcolor='#f1f1f1'><font face='verdana, arial, helvetica' size='2' align='center'>Login ID</font></td>
+			<td bgcolor='#f1f1f1' align='center'><font face='verdana, arial, helvetica' size='2'>
+			
+			<input type ='text' name='userid' ></font></td></tr>
+			
+			<tr><td bgcolor='#ffffff'><font face='verdana, arial, helvetica' size='2' align='center'>Password</font></td>
+			 
+			<td bgcolor='#ffffff' align='center'><font face='verdana, arial, helvetica' size='2'>
+			
+			<input type ='text' name='password'></font></td>
+			</tr>
+			
+			<tr>
+			 <td bgcolor='#f1f1f1' colspan='2' align='center'><font face='verdana, arial, helvetica' size='2' align='center'>
+			<input type='submit' value='Submit'></font></td> </tr>
+	   <tr><td></td></tr>
+ 			
+</table></center></form> 
+<center><p><a href=index.php>Back to Main Page</a></p></center>
+<center><p><a href="phpMyAdmin/>Database Administrator Panel</a></p></center>
+<center><p>Administrator Panel Created by <a href=mailo:rafal.zdziech@gmail.com>aMiGa</a></p></center> 
+<?
+};
+
+?>
+
+  
+</body>
+</html>

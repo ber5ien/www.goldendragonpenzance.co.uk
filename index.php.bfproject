@@ -1,0 +1,15 @@
+name: Jade Palace
+files: /var/www/GoldenDragon/index.php
+basedir: /var/www/
+webdir: 127.0.0.1
+template: 
+word_wrap: 0
+searchlist: table
+bmarks: ::/var/www/index.php:1131:><tr><td></td></tr><:1948:
+recent_files: /var/www/GoldenDragon/index.php
+opendir: /var/www/GoldenDragon
+savedir: /var/www/GoldenDragon
+view_html_toolbar: 1
+view_custom_menu: 1
+view_main_toolbar: 1
+view_left_panel: 1

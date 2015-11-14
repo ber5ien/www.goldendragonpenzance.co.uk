@@ -1,0 +1,73 @@
+<? session_start(); ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/validate/jquery.validate.js"></script>
+		<style type="text/css">
+		label.error {float: inherit; color: yellow; font-size: 0.6em; }
+		option.error {color: yellow; font-size: 0.6em;  }
+		</style>
+  <script>
+  $(document).ready(function(){
+    $("#register_form").validate();
+  });
+  </script>
+
+
+<title>Golden Dragon - Chinese Food Take Away in Cornwall </title>
+	<meta name="author" content="aMiGa">
+	<meta name="keywords" content="Golden Dragon, dragon, golden, chinese food, chinese, cantonese, meals, take, away, food, st austell, Roche, Truro, Cornwall, takeaway">
+	<meta name="description" content="Golden Dragon, Chinese, Take Away, Cornwall">
+	<meta name="copyright" content="Rafal Zdziech" >
+	<meta name="ROBOTS" content="INDEX, FOLLOW">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta name="generator" content="Bluefish 1.0.7">
+	<link rel="shortcut icon" href="graphics/favicon.ico">
+	<link rel="stylesheet" href="css/standard.css" type="text/css" media="screen" >
+	     
+	
+	<STYLE type="text/css">BODY { background: url("graphics/background/background.png") repeat-x }</STYLE>
+
+</head>
+<?
+include_once('dishes_function.php');
+?>
+<body>
+<!-- top banner -->
+<table border=0 style="width: 1000px;" align=center cellpadding="0" cellspacing="0">
+ <tr><td align=center><table style="width: 1000px; background-image:url(graphics/banner.png); height: 122px"><tr><td></td></tr></table></td></tr>
+</table> 
+<!-- end of top banner -->
+
+<!-- center table with sides-->
+<table border=0 style="width: 1000px;" align=center cellpadding="0" cellspacing="0">
+ <tr>
+ 	<td align=center>
+ 	 <!--  center without side graphics -->
+ 		<table style="width: 1000px; background-image:url(graphics/middle.png)" cellpadding="0" cellspacing="0">
+ 			<tr>
+ 				<td>
+ 				<!-- center table containt left middle and rigt sides -->
+				 <table border=0 align=center style="width: 950px; margin-left: 20px"  cellpadding="0" cellspacing="0">
+					<tr>
+						<!--left menu-->	
+						<td width=200 valign=top>	
+	
+								<div class="content"><center><h2>JADE PALACE</h2></center></div>
+				  					 <div class="subbox">
+										<ul>
+										<li><a href="index.php">Home &raquo;</a></li>
+										<li><a href="free.php"><u>Free Dishes &amp; Vouchers &raquo;</u></a></li>	
+										<!--<li><a href="about-us.php">About Us &raquo;</a></li>-->
+										<li><a href="contact-us.php">Contact Us &raquo;</a></li>
+										</ul>	
+									 </div>
+			
+								<div class="content"><center><h2>MENU</h2></center></div>
+									<div class="subbox">
+									<ul><? dishes_menu_list();	?></ul>
+									</div>
+						</td>

@@ -1,0 +1,9 @@
+<?
+$admin="jade.palace";
+$password="jade123";
+$my_email="gdpenzance@aol.com";
+$address="10.10.10.3";
+$dbname = "jadepala_goldendragon";
+$dbuser = "jadepala_dragon";
+$dbpassword = "123123";
+?>
